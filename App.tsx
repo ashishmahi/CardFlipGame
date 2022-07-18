@@ -9,16 +9,14 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, useColorScheme} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Game from './src/Game/Game';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    height: '100%',
+    backgroundColor: 'grey',
   };
 
   return (

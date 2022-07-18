@@ -1,13 +1,30 @@
 import React from 'react';
-import {Button, Text} from 'react-native';
+import {Pressable} from 'react-native';
+import Card from './components/Card/Card';
+import {
+  GameGrid,
+  RestartAndStepsContainer,
+  RestartText,
+  StepCount,
+  Steps,
+} from './Game.style';
 
-type GameProps = {
-  title: string;
-};
-const Game: React.FC<GameProps> = () => {
+const Game: React.FC = () => {
   return (
     <>
-      <Button title="Restart" />
+      <RestartAndStepsContainer>
+        <Pressable>
+          <RestartText>Restart</RestartText>
+        </Pressable>
+        <Steps>
+          STEPS:<StepCount>0</StepCount>{' '}
+        </Steps>
+      </RestartAndStepsContainer>
+      <GameGrid>
+        {[...Array(12).keys()].map(i => {
+          return <Card key={`id is ${i}`} id={i} isOpen />;
+        })}
+      </GameGrid>
     </>
   );
 };

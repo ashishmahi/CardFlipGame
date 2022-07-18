@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Test should render closed card 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "white",
+        "borderStyle": "solid",
+        "borderWidth": 4,
+        "height": 140,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "marginTop": 10,
+        "width": "27%",
+      },
+      Object {
+        "backgroundColor": "deepskyblue",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "white",
+        },
+      ]
+    }
+  >
+    ?
+  </Text>
+</View>
+`;
+
+exports[`Card Test should render open card 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "white",
+        "borderStyle": "solid",
+        "borderWidth": 4,
+        "height": 140,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "marginTop": 10,
+        "width": "27%",
+      },
+      Object {
+        "backgroundColor": "white",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "black",
+        },
+      ]
+    }
+  >
+    1
+  </Text>
+</View>
+`;
