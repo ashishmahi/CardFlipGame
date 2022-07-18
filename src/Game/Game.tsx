@@ -28,7 +28,7 @@ const Game: React.FC = () => {
           return (
             <Card
               onCardPress={() => onCardClick(card)}
-              key={`id is ${card.id}`}
+              key={`id-${card.id}`}
               card={card}
               isOpen={isCardOpen(card.id)}
             />
