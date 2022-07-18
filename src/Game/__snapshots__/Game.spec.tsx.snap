@@ -30,6 +30,7 @@ Array [
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
+      testID="restart"
     >
       <Text
         style={

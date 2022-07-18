@@ -1,85 +1,12 @@
 import React from 'react';
-import {fireEvent, render} from '@testing-library/react-native';
+import {fireEvent, render, RenderResult} from '@testing-library/react-native';
 import Game from './Game';
 import {Alert} from 'react-native';
 
 jest.useFakeTimers();
 
 describe('Game Test', () => {
-  it('should render  Game', () => {
-    expect(render(<Game />)).toMatchSnapshot();
-  });
-  it('should open the card when clicked', () => {
-    const screen = render(<Game />);
-    const cell = screen.getByTestId('card-1');
-    const cellContent = screen.getByTestId('card-content-1');
-    fireEvent.press(cell);
-    expect(cell.props.style[0].backgroundColor).toBe('white');
-    expect(cellContent.children).toContain('2');
-  });
-
-  it('should open only single card', () => {
-    const screen = render(<Game />);
-    const cell = screen.getByTestId('card-2');
-    fireEvent.press(cell);
-    expect(screen.getAllByText('3')).toHaveLength(1);
-  });
-
-  it('should increase steps counter', () => {
-    const screen = render(<Game />);
-    const cell = screen.getByTestId('card-1');
-    fireEvent.press(cell);
-    expect(screen.getByTestId('stepCounter').children).toContain('1');
-  });
-
-  it('should open, wait for a second and close both the card if pair is non matching', () => {
-    const screen = render(<Game />);
-    const cell1 = screen.getByTestId('card-1');
-    const cell2 = screen.getByTestId('card-2');
-    fireEvent.press(cell1);
-    fireEvent.press(cell2);
-    expect(cell1.props.style[0].backgroundColor).toBe('white');
-    expect(cell2.props.style[0].backgroundColor).toBe('white');
-
-    jest.runAllTimers();
-    expect(cell1.props.style[0].backgroundColor).toBe('deepskyblue');
-    expect(cell2.props.style[0].backgroundColor).toBe('deepskyblue');
-  });
-
-  it('should keep open the matching pairs', () => {
-    const screen = render(<Game />);
-    const cell1 = screen.getByTestId('card-1');
-    const cell2 = screen.getByTestId('card-7');
-    fireEvent.press(cell1);
-    fireEvent.press(cell2);
-    expect(cell1.props.style[0].backgroundColor).toBe('white');
-    expect(cell2.props.style[0].backgroundColor).toBe('white');
-
-    jest.runAllTimers();
-    expect(cell1.props.style[0].backgroundColor).toBe('white');
-    expect(cell2.props.style[0].backgroundColor).toBe('white');
-  });
-
-  it('should keep open the matching pairs even after clicking on third card', () => {
-    const screen = render(<Game />);
-    const cell1 = screen.getByTestId('card-1');
-    const cell7 = screen.getByTestId('card-7');
-    const cell2 = screen.getByTestId('card-2');
-    fireEvent.press(cell1);
-    fireEvent.press(cell7);
-    expect(cell1.props.style[0].backgroundColor).toBe('white');
-    expect(cell7.props.style[0].backgroundColor).toBe('white');
-
-    jest.runAllTimers();
-    fireEvent.press(cell2);
-    jest.runAllTimers();
-    expect(cell1.props.style[0].backgroundColor).toBe('white');
-    expect(cell7.props.style[0].backgroundColor).toBe('white');
-  });
-
-  it('should alert on winning the game', () => {
-    const spyAlert = jest.spyOn(Alert, 'alert');
-    const screen = render(<Game />);
+  const winGame = (screen: RenderResult) => {
     const cell0 = screen.getByTestId('card-0');
     const cell1 = screen.getByTestId('card-1');
     const cell2 = screen.getByTestId('card-2');
@@ -112,9 +39,120 @@ describe('Game Test', () => {
     fireEvent.press(cell11);
 
     jest.runAllTimers();
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should render  Game', () => {
+    expect(render(<Game />)).toMatchSnapshot();
+  });
+  it('should open the card when clicked', () => {
+    const container = render(<Game />);
+    const cell = container.getByTestId('card-1');
+    const cellContent = container.getByTestId('card-content-1');
+    fireEvent.press(cell);
+    expect(cell.props.style[0].backgroundColor).toBe('white');
+    expect(cellContent.children).toContain('2');
+  });
+
+  it('should open only single card', () => {
+    const container = render(<Game />);
+    const cell = container.getByTestId('card-2');
+    fireEvent.press(cell);
+    expect(container.getAllByText('3')).toHaveLength(1);
+  });
+
+  it('should increase steps counter', () => {
+    const container = render(<Game />);
+    const cell = container.getByTestId('card-1');
+    fireEvent.press(cell);
+    expect(container.getByTestId('stepCounter').children).toContain('1');
+  });
+
+  it('should open, wait for a second and close both the card if pair is non matching', () => {
+    const container = render(<Game />);
+    const cell1 = container.getByTestId('card-1');
+    const cell2 = container.getByTestId('card-2');
+    fireEvent.press(cell1);
+    fireEvent.press(cell2);
+    expect(cell1.props.style[0].backgroundColor).toBe('white');
+    expect(cell2.props.style[0].backgroundColor).toBe('white');
+
+    jest.runAllTimers();
+    expect(cell1.props.style[0].backgroundColor).toBe('deepskyblue');
+    expect(cell2.props.style[0].backgroundColor).toBe('deepskyblue');
+  });
+
+  it('should keep open the matching pairs', () => {
+    const container = render(<Game />);
+    const cell1 = container.getByTestId('card-1');
+    const cell2 = container.getByTestId('card-7');
+    fireEvent.press(cell1);
+    fireEvent.press(cell2);
+    expect(cell1.props.style[0].backgroundColor).toBe('white');
+    expect(cell2.props.style[0].backgroundColor).toBe('white');
+
+    jest.runAllTimers();
+    expect(cell1.props.style[0].backgroundColor).toBe('white');
+    expect(cell2.props.style[0].backgroundColor).toBe('white');
+  });
+
+  it('should keep open the matching pairs even after clicking on third card', () => {
+    const container = render(<Game />);
+    const cell1 = container.getByTestId('card-1');
+    const cell7 = container.getByTestId('card-7');
+    const cell2 = container.getByTestId('card-2');
+    fireEvent.press(cell1);
+    fireEvent.press(cell7);
+    expect(cell1.props.style[0].backgroundColor).toBe('white');
+    expect(cell7.props.style[0].backgroundColor).toBe('white');
+
+    jest.runAllTimers();
+    fireEvent.press(cell2);
+    jest.runAllTimers();
+    expect(cell1.props.style[0].backgroundColor).toBe('white');
+    expect(cell7.props.style[0].backgroundColor).toBe('white');
+  });
+
+  it('should alert on winning the game', () => {
+    const spyAlert = jest.spyOn(Alert, 'alert');
+    const container = render(<Game />);
+    winGame(container);
     expect(spyAlert).toHaveBeenCalledWith(
       'Congratulation',
       'You win this game in 12 steps',
+      [{onPress: expect.any(Function), text: 'Try Another Round'}],
     );
+  });
+  it('should restart game on restart click', () => {
+    const container = render(<Game />);
+    const cell1 = container.getByTestId('card-1');
+    const cell7 = container.getByTestId('card-7');
+
+    fireEvent.press(cell1);
+    fireEvent.press(cell7);
+    fireEvent.press(container.getByTestId('restart'));
+
+    expect(cell1.props.style[0].backgroundColor).toBe('deepskyblue');
+    expect(cell7.props.style[0].backgroundColor).toBe('deepskyblue');
+    expect(container.getByTestId('stepCounter').children).toContain('0');
+  });
+  it('should restart game on restart click of winning message', () => {
+    const spyAlert = jest.spyOn(Alert, 'alert');
+    const container = render(<Game />);
+
+    winGame(container);
+
+    spyAlert.mock.calls[0][2][0].onPress();
+
+    const cell1 = container.getByTestId('card-1');
+    const cell7 = container.getByTestId('card-7');
+
+    expect(cell1.props.style[0].backgroundColor).toBe('deepskyblue');
+    expect(cell7.props.style[0].backgroundColor).toBe('deepskyblue');
+
+    expect(container.getByTestId('stepCounter').children).toContain('0');
   });
 });

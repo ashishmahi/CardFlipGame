@@ -11,11 +11,12 @@ import {
 import useGame from './useGame';
 
 const Game: React.FC = () => {
-  const {gridNumbers, onCardClick, isCardOpen, noOfSteps} = useGame();
+  const {gridNumbers, onCardClick, isCardOpen, noOfSteps, restartGame} =
+    useGame();
   return (
     <>
       <RestartAndStepsContainer>
-        <Pressable>
+        <Pressable testID="restart" onPress={restartGame}>
           <RestartText>Restart</RestartText>
         </Pressable>
         <Steps>

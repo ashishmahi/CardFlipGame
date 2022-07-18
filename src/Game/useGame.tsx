@@ -40,11 +40,26 @@ export const useGame = () => {
           Alert.alert(
             'Congratulation',
             `You win this game in ${noOfSteps + 1} steps`,
+            [
+              {
+                text: 'Try Another Round',
+                onPress: () => {
+                  console.log('calling restart');
+                  restartGame();
+                },
+              },
+            ],
           );
         }
       }
     }
     setNoOfSteps(noOfSteps + 1);
+  };
+
+  const restartGame = () => {
+    setCurrentOpenPair([]);
+    setNoOfSteps(0);
+    setMatchedCards([]);
   };
 
   const isCardOpen = (cardId: number) => {
@@ -63,6 +78,7 @@ export const useGame = () => {
     onCardClick,
     isCardOpen,
     noOfSteps,
+    restartGame,
   };
 };
 
