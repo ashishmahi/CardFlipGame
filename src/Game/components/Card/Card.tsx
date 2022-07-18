@@ -1,21 +1,23 @@
 import React from 'react';
 import {CardContent, CardWrapper} from './Card.style';
 
-type CardProps = {
+export type CardModal = {
   id: number;
-  isOpen: boolean;
+  number: number;
 };
-const Card: React.FC<CardProps> = ({isOpen, id}) => {
+type CardProps = {
+  card: CardModal;
+  isOpen: boolean;
+  onCardPress: (id: number) => void;
+};
+const Card: React.FC<CardProps> = ({isOpen, card, onCardPress}) => {
   return (
     <CardWrapper
-      style={{
-        backgroundColor: isOpen ? 'white' : 'deepskyblue',
-      }}>
-      <CardContent
-        style={{
-          color: isOpen ? 'black' : 'white',
-        }}>
-        {isOpen ? id : '?'}
+      onPress={onCardPress}
+      testID={`card-${card.id}`}
+      isOpen={isOpen}>
+      <CardContent testID={`card-content-${card.id}`} isOpen={isOpen}>
+        {isOpen ? card.number : '?'}
       </CardContent>
     </CardWrapper>
   );

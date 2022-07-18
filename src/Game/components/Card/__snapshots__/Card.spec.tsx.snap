@@ -2,10 +2,24 @@
 
 exports[`Card Test should render closed card 1`] = `
 <View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  isOpen={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Array [
       Object {
         "alignItems": "center",
+        "backgroundColor": "deepskyblue",
         "borderColor": "white",
         "borderStyle": "solid",
         "borderWidth": 4,
@@ -17,24 +31,21 @@ exports[`Card Test should render closed card 1`] = `
         "marginTop": 10,
         "width": "27%",
       },
-      Object {
-        "backgroundColor": "deepskyblue",
-      },
     ]
   }
+  testID="card-1"
 >
   <Text
+    isOpen={false}
     style={
       Array [
         Object {
           "color": "white",
           "fontSize": 30,
         },
-        Object {
-          "color": "white",
-        },
       ]
     }
+    testID="card-content-1"
   >
     ?
   </Text>
@@ -43,10 +54,24 @@ exports[`Card Test should render closed card 1`] = `
 
 exports[`Card Test should render open card 1`] = `
 <View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  isOpen={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Array [
       Object {
         "alignItems": "center",
+        "backgroundColor": "white",
         "borderColor": "white",
         "borderStyle": "solid",
         "borderWidth": 4,
@@ -58,24 +83,21 @@ exports[`Card Test should render open card 1`] = `
         "marginTop": 10,
         "width": "27%",
       },
-      Object {
-        "backgroundColor": "white",
-      },
     ]
   }
+  testID="card-1"
 >
   <Text
+    isOpen={true}
     style={
       Array [
         Object {
-          "color": "white",
-          "fontSize": 30,
-        },
-        Object {
           "color": "black",
+          "fontSize": 30,
         },
       ]
     }
+    testID="card-content-1"
   >
     1
   </Text>

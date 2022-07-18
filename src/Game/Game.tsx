@@ -8,8 +8,10 @@ import {
   StepCount,
   Steps,
 } from './Game.style';
+import useGame from './useGame';
 
 const Game: React.FC = () => {
+  const {gridNumbers, onCardClick, isCardOpen, noOfSteps} = useGame();
   return (
     <>
       <RestartAndStepsContainer>
@@ -17,12 +19,19 @@ const Game: React.FC = () => {
           <RestartText>Restart</RestartText>
         </Pressable>
         <Steps>
-          STEPS:<StepCount>0</StepCount>{' '}
+          STEPS:<StepCount testID="stepCounter">{noOfSteps}</StepCount>{' '}
         </Steps>
       </RestartAndStepsContainer>
       <GameGrid>
-        {[...Array(12).keys()].map(i => {
-          return <Card key={`id is ${i}`} id={i} isOpen />;
+        {gridNumbers.map(card => {
+          return (
+            <Card
+              onCardPress={() => onCardClick(card)}
+              key={`id is ${card.id}`}
+              card={card}
+              isOpen={isCardOpen(card.id)}
+            />
+          );
         })}
       </GameGrid>
     </>

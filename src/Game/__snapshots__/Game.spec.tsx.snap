@@ -64,6 +64,7 @@ Array [
             },
           ]
         }
+        testID="stepCounter"
       >
         0
       </Text>
@@ -81,10 +82,24 @@ Array [
     }
   >
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -96,33 +111,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-0"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-0"
       >
-        0
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -134,33 +160,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-1"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-1"
       >
-        1
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -172,33 +209,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-2"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-2"
       >
-        2
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -210,33 +258,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-3"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-3"
       >
-        3
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -248,33 +307,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-4"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-4"
       >
-        4
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -286,33 +356,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-5"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-5"
       >
-        5
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -324,33 +405,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-6"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-6"
       >
-        6
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -362,33 +454,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-7"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-7"
       >
-        7
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -400,33 +503,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-8"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-8"
       >
-        8
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -438,33 +552,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-9"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-9"
       >
-        9
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -476,33 +601,44 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-10"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-10"
       >
-        10
+        ?
       </Text>
     </View>
     <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      isOpen={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "deepskyblue",
             "borderColor": "white",
             "borderStyle": "solid",
             "borderWidth": 4,
@@ -514,26 +650,23 @@ Array [
             "marginTop": 10,
             "width": "27%",
           },
-          Object {
-            "backgroundColor": "white",
-          },
         ]
       }
+      testID="card-11"
     >
       <Text
+        isOpen={false}
         style={
           Array [
             Object {
               "color": "white",
               "fontSize": 30,
             },
-            Object {
-              "color": "black",
-            },
           ]
         }
+        testID="card-content-11"
       >
-        11
+        ?
       </Text>
     </View>
   </View>,
