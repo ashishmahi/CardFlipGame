@@ -26,3 +26,4 @@ export const generateGrid: () => CardModal[] = () => {
   const randomPairs = generateRandomCards();
   return shuffle(randomPairs);
 };
+

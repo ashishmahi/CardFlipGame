@@ -11,8 +11,7 @@ import {
 import useGame from './useGame';
 
 const Game: React.FC = () => {
-  const {gridNumbers, onCardClick, isCardOpen, noOfSteps, restartGame} =
-    useGame();
+  const {grid, onCardClick, isCardOpen, noOfSteps, restartGame} = useGame();
   return (
     <>
       <RestartAndStepsContainer>
@@ -24,7 +23,7 @@ const Game: React.FC = () => {
         </Steps>
       </RestartAndStepsContainer>
       <GameGrid>
-        {gridNumbers.map(card => {
+        {grid.map(card => {
           return (
             <Card
               onCardPress={() => onCardClick(card)}

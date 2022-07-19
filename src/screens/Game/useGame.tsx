@@ -18,7 +18,7 @@ export const useGame = () => {
   //   {number: 5, id: 10},
   //   {number: 6, id: 11},
   // ];
-  const [gridNumbers] = React.useState<CardModal[]>(generateGrid());
+  const [grid, setGrid] = React.useState<CardModal[]>(generateGrid());
   const [currentOpenPair, setCurrentOpenPair] = React.useState<CardModal[]>([]);
   const [noOfSteps, setNoOfSteps] = React.useState<number>(0);
   const [matchedCards, setMatchedCards] = React.useState<CardModal[]>([]);
@@ -59,6 +59,7 @@ export const useGame = () => {
   };
 
   const restartGame = () => {
+    setGrid(generateGrid());
     setCurrentOpenPair([]);
     setNoOfSteps(0);
     setMatchedCards([]);
@@ -76,7 +77,7 @@ export const useGame = () => {
   };
 
   return {
-    gridNumbers,
+    grid,
     onCardClick,
     isCardOpen,
     noOfSteps,
