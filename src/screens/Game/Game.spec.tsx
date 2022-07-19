@@ -5,6 +5,25 @@ import {Alert} from 'react-native';
 
 jest.useFakeTimers();
 
+jest.mock('./utils.ts', () => {
+  return {
+    generateGrid: jest.fn().mockReturnValue([
+      {number: 1, id: 0},
+      {number: 2, id: 1},
+      {number: 3, id: 2},
+      {number: 4, id: 3},
+      {number: 5, id: 4},
+      {number: 6, id: 5},
+      {number: 1, id: 6},
+      {number: 2, id: 7},
+      {number: 3, id: 8},
+      {number: 4, id: 9},
+      {number: 5, id: 10},
+      {number: 6, id: 11},
+    ]),
+  };
+});
+
 describe('Game Test', () => {
   const winGame = (screen: RenderResult) => {
     const cell0 = screen.getByTestId('card-0');
