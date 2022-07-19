@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
 
-import Game from './src/Game/Game';
+import Game from './src/screens/Game/Game';
 
 const App = () => {
   const backgroundStyle = {

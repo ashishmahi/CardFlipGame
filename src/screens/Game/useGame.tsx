@@ -1,6 +1,6 @@
 import React from 'react';
 import {Alert} from 'react-native';
-import {CardModal} from './components/Card/Card';
+import {CardModal} from '../../components/Card/Card';
 
 export const useGame = () => {
   const gridNumbers = [
